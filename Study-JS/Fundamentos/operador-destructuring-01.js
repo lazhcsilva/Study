@@ -33,6 +33,29 @@ console.log(n2, n4)
 
 console.log("---------------------------------------")
 
+// É possivel trocar também mesmo locais de variáveis com o operador destructuring
+
+var a = 1;
+var b = 3;
+
+[a, b] = [b, a];
+console.log(a); // 3
+console.log(b); // 1
+
+console.log("---------------------------------------")
+
+// fazendo com que o operador destructuring chame os atributos dentro de uma variavel
+
+const { nome: n, idade: i } = pessoa
+console.log(n, i) 
+
+console.log("---------------------------------------")
+
+const { sobrenome, bemHumorada = true } = pessoa
+console.log(sobrenome, bemHumorada)
+
+console.log("---------------------------------------")
+
 var url = "https://developer.mozilla.org/en-US/Web/JavaScript";
 
 var parsedURL = /^(\w+)\:\/\/([^\/]+)\/(.*)$/.exec(url);
@@ -40,4 +63,4 @@ console.log(parsedURL);
 
 var [, protocol, fullhost, fullpath] = parsedURL;
 
-console.log(protocol); // "https"
+console.log(protocol);
